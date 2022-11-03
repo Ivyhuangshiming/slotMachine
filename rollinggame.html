@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/base.css"> 
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/lottery.js"></script> 
+<script type="text/javascript">
+	$(function() {
+    var lottery_List = [[0,1],[2,3],[4,5],[6,7],[8,9],[10, 11], [12, 13], [14, 15], [16, 17], [18,19]];
+    var Lindex =0;
+
+    var _luckGame = $(".game-btn").luckGame({
+        sameTimeBegin: 1, //是否同时开始，默认1
+        duration: 5000, //动画时间，默认5000
+        gameLen: 20, //产品抽奖数量，
+        game_pagesize: 8,
+        game_front: '', //奖品前缀  
+        lottery_arr_init: [1,2],     
+        game_prize_box: '.game-prize-box', //奖品盒子
+        game_prize_ul: '.game-prize-ul', //奖品数组ul
+        game_img_root:'images/',//奖品图片根目录
+        end: function(result) {
+            console.log(result);
+            
+        }
+    });
+
+    //开始抽奖
+    $(".game-btn").click(function() {
+            //初始化默认显示奖品数组
+             if (Lindex == 10){
+                Lindex = 0
+             }
+            _luckGame.lottery_arr_number = lottery_List[Lindex]; //设置中奖结果数组      
+            _luckGame.start();
+                Lindex ++;
+
+            state =0;
+         
+    })
+})
+
+</script>
+
+
+<div style="width:50%;margin-top: 10px;overflow: hidden;">
+    <a class="game-header" href="javascript:void(0);">
+        <!--<img src="https://download.shengli.com/ui/control/lottery/images/1p.png">-->
+    </a>
+    <div class="game-content">
+        <img src="ui/BG.png">
+        <div class="game-prize-wrap">
+            <div class="game-prize-list">
+                <div class="game-prize" style="background: #ffffff;">
+                    <div class="game-prize-box" id="game1" data-index="1">
+                        <ul class="game-prize-ul" style="">
+                        </ul>
+                    </div>
+                </div>
+                <div class="game-prize" style="background: #ffffff;">
+                    <div class="game-prize-box" id="game2" data-index="2">
+                        <ul class="game-prize-ul" style="">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="game-rule" href="javascript:void(0);"></a>
+        <span class="game-btn"></span>
+    </div>
+</div>
+
+</head>
+<body>
+
+
+
+
+
+

@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align: bottom;
+}
+.game-header {
+  width: 100%;
+}
+.game-header img {
+  width: 100%;
+}
+.game-content {
+  position: relative;
+  width: 100%;
+}
+.game-content img {
+  width: 100%;
+}
+.game-prize-wrap {
+  position: absolute;
+  margin: 0 auto;
+  top: 36%;
+  left: 1%;
+  right: 0;
+  bottom: 0;
+  width: 70%;
+  height: 25%;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  overflow: hidden;
+}
+.game-prize-wrap:before {
+  position: absolute;
+  top: -1PX;
+  right: 0;
+  bottom: 1PX;
+  left: -1PX;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  width: 101%;
+  height: 100%;
+  content: "";
+  box-shadow: 0 1.25rem 1.25rem -1.25rem #000 inset;
+  z-index: 12;
+}
+.game-prize-wrap:after {
+  position: absolute;
+  top: 1PX;
+  right: 0;
+  bottom: -1PX;
+  left: -1PX;
+  width: 101%;
+  height: 100%;
+  box-shadow: 0 -1.25rem 1.25rem -1.25rem #000 inset;
+  z-index: 12;
+  content: "";
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+.game-prize-list {
+  height: 100%;
+  overflow: hidden;
+}
+.game-prize {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: 10;
+  overflow: hidden;
+}
+.game-prize:first-child {
+  left: -50%;
+  transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -o-transform: translateX(100%);
+}
+.game-prize:nth-child(2) {
+  left: 50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.game-prize:last-child {
+  left: 100%;
+  transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+}
+.game-prize-box {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.game-prize-ul {
+  position: relative;
+  top: 0;
+  font-size: 0;
+  z-index: 10;
+}
+.game-prize-ul li {
+  position: relative;
+  width: 100%;
+}
+.game-prize-ul li img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 90%;
+  width: auto;
+}
+.play {
+  transition-duration: 5500ms;
+  transform: translate(0px, -3263.91px) translateZ(0px);
+}
+.game-rule {
+  position: absolute;
+  top: 71%;
+  left: 15%;
+  width: 8%;
+  height: 18%;
+}
+.no-login-game-btn {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 40%;
+  height: 32%;
+}
+.game-btn {
+  cursor: pointer;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 40%;
+  height: 32%;
+}
